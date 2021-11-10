@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarItem from "./NavbarItem";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import Title from "../Title";
 import Styles from "./Navbar.module.css";
@@ -43,6 +43,14 @@ function Navbar() {
       </div>
       <Button path="/download">Download App</Button>
     </nav>
+  );
+}
+
+function NavbarItem({ styles, name, path, haveDropDown, dropDown }) {
+  return (
+    <Link to={path ? path : ""}>
+      <div className={styles.navitem}>{name}</div>
+    </Link>
   );
 }
 
