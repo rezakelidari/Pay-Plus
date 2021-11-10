@@ -1,16 +1,17 @@
 @import url("../../styles/colors.css");
 
 nav {
-  padding: 0.75rem 4rem;
+  padding: 0.75rem 2rem;
   margin: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  justify-content: space-between;
   border-radius: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 0 0 1rem var(--color-primary-shadow);
   position: fixed;
-  max-width: 1000px;
+  min-width: 650px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 }
