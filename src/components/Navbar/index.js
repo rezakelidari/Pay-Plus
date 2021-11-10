@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
 import Title from "../Title";
@@ -26,8 +26,16 @@ function Navbar() {
     },
   ];
 
+  const reducer = (state, action) =>
+    action.type ? Styles.scrolled : undefined;
+  const [navbarClass, dispatch] = useReducer(reducer, undefined);
+
+  window.addEventListener("scroll", () => {
+    window.scrollY > 0 ? dispatch({ type: true }) : dispatch({ type: false });
+  });
+
   return (
-    <nav>
+    <nav className={navbarClass && navbarClass}>
       <Title />
       <div className={Styles.navitems}>
         {items.map((item) => (
