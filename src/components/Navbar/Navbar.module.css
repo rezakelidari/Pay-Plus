@@ -11,6 +11,8 @@ nav {
   box-shadow: 0 0 1rem var(--color-primary-shadow);
   position: fixed;
   max-width: 1000px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .navitems {
