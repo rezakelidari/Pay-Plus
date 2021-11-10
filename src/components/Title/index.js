@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Styles from "./Title.module.css";
 
-function Title({big}) {
+function Title({ big }) {
   return (
-    <h1 className={big && Styles.big}>
-      Pay<span>+</span>
-    </h1>
+    <Link to="/">
+      <h1 className={big && Styles.big}>
+        Pay<span>+</span>
+      </h1>
+    </Link>
   );
 }
 
