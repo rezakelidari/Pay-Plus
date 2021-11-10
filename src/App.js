@@ -1,8 +1,14 @@
-import React from 'react';
+import React from "react";
+import Styles from "./styles/Main.module.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div>Hello world</div>
+    <>
+      <div className={Styles.nav}>
+        <Navbar />
+      </div>
+    </>
   );
 }
 

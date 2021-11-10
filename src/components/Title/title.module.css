@@ -1,0 +1,10 @@
+@import url("../../styles/colors.css");
+
+h1 {
+  color: var(--color-primary);
+  display: inline;
+}
+
+h1 span {
+  color: rgb(0, 204, 68);
+}

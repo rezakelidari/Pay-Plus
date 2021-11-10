@@ -1,0 +1,5 @@
+* {
+  --color-primary: rgb(0, 68, 255);
+  --color-primary-shadow: rgba(0, 68, 255, 0.15);
+  --text-primary: rgb(0, 34, 128);
+}

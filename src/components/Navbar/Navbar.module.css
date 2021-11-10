@@ -1,0 +1,36 @@
+@import url("../../styles/colors.css");
+
+nav {
+  padding: 0.5rem 4rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--color-primary-shadow);
+  position: fixed;
+  max-width: 1000px;
+}
+
+.navitems {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navitem {
+  border: 1px solid var(--color-primary-shadow);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: none;
+  transition: 0.3s ease all;
+}
+
+.navitem:hover {
+  background: var(--color-primary);
+  box-shadow: 0 0 1.5rem -0.25rem var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+}
