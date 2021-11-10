@@ -16,13 +16,13 @@ function Navbar() {
       name: "Services",
       haveDropDown: false,
       dropDown: [],
-      path: null,
+      path: undefined,
     },
     {
       name: "Annual Report",
       haveDropDown: false,
       dropDown: [],
-      path: "annual"
+      path: "annual",
     },
   ];
 
@@ -34,6 +34,7 @@ function Navbar() {
           <NavbarItem
             styles={Styles}
             name={item.name}
+            path={item.path}
             key={item.name}
             haveDropDown={item.haveDropDown}
             dropDown={item.dropDown}

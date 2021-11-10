@@ -1,7 +1,7 @@
 @import url("../../styles/colors.css");
 
 nav {
-  padding: 0.5rem 4rem;
+  padding: 0.75rem 4rem;
   margin: 1rem;
   display: flex;
   align-items: center;
