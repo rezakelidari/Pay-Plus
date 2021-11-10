@@ -23,6 +23,7 @@ function Home() {
           />
         </div>
       </Wrapper>
+      <span className={Styles.scrollDown}></span>
     </div>
   );
 }

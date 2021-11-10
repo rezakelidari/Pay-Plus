@@ -19,3 +19,41 @@
   text-align: justify;
   text-align-last: left;
 }
+
+.scrollDown {
+  position: absolute;
+  height: 2.5rem;
+  width: 1.5rem;
+  bottom: 2rem;
+  border-radius: 20px;
+  border: 2px solid var(--color-primary);
+}
+
+.scrollDown::after {
+  position: absolute;
+  content: "";
+  height: 0.75rem;
+  width: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  background: var(--color-primary);
+  animation: scroll 1.5s linear forwards infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    top: 0px;
+  }
+
+  50% {
+    opacity: 1;
+    top: 15px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 20px;
+  }
+}
