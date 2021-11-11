@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Styles from "./Home.module.css";
 
 // Home imports
@@ -40,6 +40,7 @@ function Home() {
       </div>
       <Loan />
       <Invitation />
+      <Faqs />
     </>
   );
 }
@@ -163,5 +164,79 @@ function Invitation() {
   );
 }
 // End Invitation section
+
+// Faqs section
+function Faqs() {
+  const faqs = [
+    {
+      question: "Do I need to visit Pay+ in person to get credit?",
+      answer:
+        "No, all the steps of receiving credit are done in absentia through the Pay+ application.",
+    },
+    {
+      question: "What will be the start time of repayment of installments?",
+      answer:
+        "One month after the contract is finalized, it will be time to start paying.",
+    },
+    {
+      question:
+        "After reviewing the documents, how will Pay+ notify me of the confirmation of the documents?",
+      answer:
+        "After reviewing the documents and confirming or not confirming the documents by Pay + experts, the continuation of the steps will be sent to you via SMS.",
+    },
+    {
+      question: "Do I have to pay a down payment to use the loan?",
+      answer:
+        "You will only pay a percentage of each transaction (depending on the loan amount and repayment period) for the down payment.",
+    },
+    {
+      question: "What documents do I have to submit to Pay+?",
+      answer:
+        "National card image (provided online) and collateral (provided physically after verification of documents)",
+    },
+    {
+      question: "Is there an age limit for receiving Pay+ credit?",
+      answer: "Yes, people over the age of 18 can use Pay+ credit.",
+    },
+  ];
+
+  return (
+    <div className={Styles.faqsMain}>
+      <h1 className={Styles.sectionHeading}>Faqs:</h1>
+      <ul className={Styles.faqsList}>
+        {faqs.map((faq) => (
+          <Faq question={faq.question} answer={faq.answer} key={faq.question} />
+        ))}
+      </ul>
+    </div>
+  );
+
+  function Faq({ question, answer }) {
+    const reducer = (state, action) => {
+      return state.className === ""
+        ? { className: Styles.opened, buttonText: "-" }
+        : { className: "", buttonText: "+" };
+    };
+
+    const [data, dispatch] = useReducer(reducer, {
+      className: "",
+      buttonText: "+",
+    });
+
+    return (
+      <li
+        className={`${Styles.faq} ${data.className}`}
+        onClick={() => dispatch()}
+      >
+        <h1 className={Styles.faqQuestion}>
+          {question}
+          <button>{data.buttonText}</button>
+        </h1>
+        <p className={Styles.faqAnswer}>{answer}</p>
+      </li>
+    );
+  }
+}
+// End Faqs section
 
 export default Home;
