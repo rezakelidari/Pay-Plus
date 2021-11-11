@@ -1,0 +1,10 @@
+@import url("../../styles/colors.css");
+
+.footerMain {
+  background: var(--color-primary-shadow);
+  height: 125px;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
