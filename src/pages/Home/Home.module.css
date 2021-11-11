@@ -1,3 +1,18 @@
+/* Globals */
+.sectionHeading {
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+.itemHeading {
+  color: var(--color-primary);
+}
+
+.itemSubheading {
+  text-align: justify;
+  text-align-last: left;
+}
+
 /* Home section */
 .homeMain {
   display: flex;
@@ -51,11 +66,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20rem;
+  gap: 5rem;
 }
 
 /* Features section */
 .loanMain .features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.loanMain .featuresContainer {
   display: grid;
   grid-template: auto / auto auto;
   gap: 5rem;
@@ -77,7 +100,6 @@
 .loanMain .feature:hover {
   box-shadow: 0 0 2rem 0rem var(--color-primary-shadow);
 }
-
 .loanMain .featureIcon {
   right: -2rem;
   top: 50%;
@@ -102,7 +124,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .loanMain .steps .timeline {
@@ -127,10 +149,6 @@
   transform: translateX(-50%);
   animation: timeline 2s forwards linear infinite;
   z-index: -1;
-}
-
-.loanMain .steps .heading {
-  font-size: 3rem;
 }
 
 .loanMain .steps .step {
@@ -170,11 +188,6 @@
 
 .loanMain .steps .step:hover .stepNumber {
   animation: icon 2s forwards linear infinite;
-}
-
-.loanMain .step .stepSubheading {
-  text-align: justify;
-  text-align-last: left;
 }
 /* End Loan section */
 

@@ -1,14 +1,14 @@
 @import url("../../styles/colors.css");
 
-h1{
+.titleHeading {
   color: var(--color-primary);
   display: inline;
 }
 
-h1.big {
+.titleHeading.titleBig {
   font-size: 3rem;
 }
 
-h1 span {
+.titleHeading .titleSubheading {
   color: rgb(0, 204, 68);
 }

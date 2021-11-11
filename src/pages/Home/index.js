@@ -45,7 +45,7 @@ function Home() {
 }
 // End Home section
 
-// Loan Section
+// Loan section
 function Loan() {
   const features = [
     {
@@ -85,28 +85,32 @@ function Loan() {
     },
     {
       title: "Providing collateral",
-      desc: "Upon initial confirmation of the documents, our partners will contact you via SMS and phone call to receive the guarantee.",
+      desc: "Upon initial confirmation of the documents, our partners will contact you via SMS and phone call to receive the collateral.",
     },
     {
       title: "Receiving Credit",
-      desc: "after receiving the guarantee, you will be provided with the use of Pay+ credit in the shortest possible time.",
+      desc: "after receiving the collateral, you will be provided with the use of Pay+ credit in the shortest possible time.",
     },
   ];
 
   return (
     <div className={Styles.loanMain}>
       <div className={Styles.features}>
-        {features.map((feature) => (
-          <Feature
-            title={feature.title}
-            icon={feature.icon}
-            desc={feature.desc}
-            key={feature.title}
-          />
-        ))}
+        <h1 className={Styles.sectionHeading}>Credit features</h1>
+        <div className={Styles.featuresContainer}>
+          {features.map((feature) => (
+            <Feature
+              title={feature.title}
+              icon={feature.icon}
+              desc={feature.desc}
+              key={feature.title}
+            />
+          ))}
+        </div>
       </div>
+      <br />
       <div className={Styles.steps}>
-        <h1 className={Styles.heading}>Steps to get credit</h1>
+        <h1 className={Styles.sectionHeading}>Steps to get credit</h1>
         <div className={Styles.timeline}>
           {steps.map((step) => {
             return (
@@ -123,23 +127,22 @@ function Loan() {
     </div>
   );
 
-
   function Feature({ icon, title, desc }) {
     return (
       <div className={Styles.feature}>
         <img src={icon} alt="Feature" className={Styles.featureIcon} />
-        <h1 className={Styles.featureHeading}>{title}</h1>
-        <p className={Styles.featureSubhead}>{desc}</p>
+        <h1 className={Styles.itemHeading}>{title}</h1>
+        <p className={Styles.itemSubheading}>{desc}</p>
       </div>
     );
   }
-  
+
   function Step({ number, title, desc }) {
     return (
       <div className={Styles.step}>
         <div className={Styles.stepNumber}>{number}</div>
-        <h1 className={Styles.stepHeading}>{title}</h1>
-        <p className={Styles.stepSubheading}>{desc}</p>
+        <h1 className={Styles.itemHeading}>{title}</h1>
+        <p className={Styles.itemSubheading}>{desc}</p>
       </div>
     );
   }
