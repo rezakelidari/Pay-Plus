@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound/";
 import Home from "./pages/Home/";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loan from "./pages/Loan";
+import Invitation from "./pages/Invitation";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <>
               <Home />
               <Loan />
+              <Invitation />
             </>
           }
         />
