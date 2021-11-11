@@ -7,10 +7,10 @@ import Title from "../../components/Title";
 import Banner from "../../assets/img/top_banner.gif";
 
 // Loan imports
-import Tap from "../../assets/icon/tap.svg";
-import Collection from "../../assets/icon/collection.svg";
-import GetMoney from "../../assets/icon/get-money.svg";
-import MoneyBack from "../../assets/icon/money-back.svg";
+import Tap from "../../assets/img/tap.svg";
+import Collection from "../../assets/img/collection.svg";
+import GetMoney from "../../assets/img/get-money.svg";
+import MoneyBack from "../../assets/img/money-back.svg";
 
 // Invitation imports
 import Button from "../../components/Button";
