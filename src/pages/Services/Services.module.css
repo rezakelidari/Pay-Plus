@@ -1,0 +1,71 @@
+@import url("../../styles/colors.css");
+
+.servicesMain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 10rem 0;
+}
+
+.servicesHeading {
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+.servicesContainer {
+  display: grid;
+  grid-template: auto / auto auto;
+}
+
+.serviceWrapper {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceWrapper:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.serviceLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 450px;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary-shadow);
+  margin: 0 -80px 0 0;
+  transition: 0.3s ease all;
+}
+
+.serviceLeft:hover {
+  margin: 0 -30px 0 0;
+}
+
+.serviceWrapper:nth-child(even) .serviceLeft {
+  margin: 0 0 0 -80px;
+}
+
+.serviceWrapper:nth-child(even) .serviceLeft:hover {
+  margin: 0 0 0 -30px;
+}
+
+.serviceName {
+  color: var(--color-primary);
+}
+
+.serviceIcon {
+  height: 250px;
+  width: 250px;
+  z-index: -1;
+}
+
+.serviceDesc {
+  text-align: justify;
+  text-align-last: left;
+}
