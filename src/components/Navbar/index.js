@@ -8,21 +8,15 @@ function Navbar() {
   const items = [
     {
       name: "Home",
-      haveDropDown: false,
-      dropDown: [],
       path: "/",
     },
     {
       name: "Services",
-      haveDropDown: false,
-      dropDown: [],
-      path: undefined,
+      path: "/services",
     },
     {
       name: "Annual Report",
-      haveDropDown: false,
-      dropDown: [],
-      path: "annual",
+      path: "/annual",
     },
   ];
 
@@ -54,7 +48,7 @@ function Navbar() {
   );
 }
 
-function NavbarItem({ styles, name, path, haveDropDown, dropDown }) {
+function NavbarItem({ styles, name, path }) {
   return (
     <Link to={path ? path : ""}>
       <div className={styles.navitem}>{name}</div>
