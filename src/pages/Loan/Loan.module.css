@@ -1,0 +1,156 @@
+@import url("../../styles/colors.css");
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10rem 0 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+/* Features section */
+.features {
+  display: grid;
+  grid-template: auto / auto auto;
+  gap: 5rem;
+}
+
+.feature {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary-shadow);
+  border-radius: 2rem;
+  transition: 0.3s ease all;
+}
+
+.feature:hover {
+  box-shadow: 0 0 2rem 0rem var(--color-primary-shadow);
+}
+
+.featureIcon {
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  background: var(--color-primary);
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50px;
+  transition: 0.3s ease all;
+}
+
+.feature:hover .featureIcon {
+  animation: icon 2s forwards linear infinite;
+}
+
+/* Steps section */
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.steps .timeline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding: 4rem;
+}
+
+.steps .timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  bottom: 0;
+  border-radius: 100px;
+  background: var(--color-primary);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: timeline 2s forwards linear infinite;
+  z-index: -1;
+}
+
+.steps .heading {
+  font-size: 3rem;
+}
+
+.steps .step {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary-shadow);
+  z-index: 1;
+  transition: 0.3s ease all;
+}
+
+.steps .step:hover {
+  box-shadow: 0 0 2rem 0rem var(--color-primary-shadow);
+}
+
+.step .stepNumber {
+  position: absolute;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 2rem;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border-radius: 100px;
+  box-shadow: 0 0 1rem -0.25rem var(--color-primary);
+}
+
+.steps .step:hover .stepNumber {
+  animation: icon 2s forwards linear infinite;
+}
+
+.step .stepSubheading {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* Keyframes */
+@keyframes icon {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(0, 68, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1rem rgba(0, 68, 255, 0);
+  }
+}
+
+@keyframes timeline {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(0, 68, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2rem rgba(0, 68, 255, 0);
+  }
+}
