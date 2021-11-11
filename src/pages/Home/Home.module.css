@@ -1,26 +1,26 @@
-.main {
+/* Home section */
+.homeMain {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  width: 100w;
 }
 
-.left {
+.homeMain .left {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.desc {
+.homeMain .desc {
   max-width: 300px;
   font-size: 1.25rem;
   text-align: justify;
   text-align-last: left;
 }
 
-.scrollDown {
+.homeMain .scrollDown {
   position: absolute;
   height: 2.5rem;
   width: 1.5rem;
@@ -29,7 +29,7 @@
   border: 2px solid var(--color-primary);
 }
 
-.scrollDown::after {
+.homeMain .scrollDown::after {
   position: absolute;
   content: "";
   height: 0.75rem;
@@ -40,7 +40,177 @@
   background: var(--color-primary);
   animation: scroll 1.5s linear forwards infinite;
 }
+/* End home section */
 
+/* Loan section */
+.loanMain {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10rem 0 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+/* Features section */
+.loanMain .features {
+  display: grid;
+  grid-template: auto / auto auto;
+  gap: 5rem;
+}
+
+.loanMain .feature {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+  position: relative;
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary-shadow);
+  border-radius: 2rem;
+  transition: 0.3s ease all;
+}
+
+.loanMain .feature:hover {
+  box-shadow: 0 0 2rem 0rem var(--color-primary-shadow);
+}
+
+.loanMain .featureIcon {
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  background: var(--color-primary);
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50px;
+  transition: 0.3s ease all;
+}
+
+.loanMain .feature:hover .featureIcon {
+  animation: icon 2s forwards linear infinite;
+}
+
+/* Steps section */
+.loanMain .steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loanMain .steps .timeline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding: 4rem;
+}
+
+.loanMain .steps .timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  bottom: 0;
+  border-radius: 100px;
+  background: var(--color-primary);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: timeline 2s forwards linear infinite;
+  z-index: -1;
+}
+
+.loanMain .steps .heading {
+  font-size: 3rem;
+}
+
+.loanMain .steps .step {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 2rem -0.5rem var(--color-primary-shadow);
+  z-index: 1;
+  transition: 0.3s ease all;
+}
+
+.loanMain .steps .step:hover {
+  box-shadow: 0 0 2rem 0rem var(--color-primary-shadow);
+}
+
+.loanMain .step .stepNumber {
+  position: absolute;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 2rem;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border-radius: 100px;
+  box-shadow: 0 0 1rem -0.25rem var(--color-primary);
+}
+
+.loanMain .steps .step:hover .stepNumber {
+  animation: icon 2s forwards linear infinite;
+}
+
+.loanMain .step .stepSubheading {
+  text-align: justify;
+  text-align-last: left;
+}
+/* End Loan section */
+
+/* Invitation section */
+.invitationMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.invitationMain .box {
+  background: center / cover url("../../assets/img/invite_bg.svg") no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 9rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 0 1rem var(--color-primary-shadow);
+}
+
+.invitationMain .heading {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.invitationMain .subheading {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+/* End Invitation section */
+
+/* Keyframes */
 @keyframes scroll {
   0% {
     opacity: 0;
@@ -57,3 +227,24 @@
     top: 20px;
   }
 }
+
+@keyframes icon {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(0, 68, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1rem rgba(0, 68, 255, 0);
+  }
+}
+
+@keyframes timeline {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(0, 68, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2rem rgba(0, 68, 255, 0);
+  }
+}
+/* End Keyframes */
