@@ -1,11 +1,13 @@
 import React from "react";
+import Styles from "./Button.module.css";
 import { Link } from "react-router-dom";
-import "./Button.module.css";
 
 function Button({ children, path, action }) {
   return (
     <Link to={path ? path : ""}>
-      <button onClick={action && action}>{children}</button>
+      <button className={Styles.button} onClick={action && action}>
+        {children}
+      </button>
     </Link>
   );
 }
