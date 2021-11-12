@@ -9,6 +9,14 @@
   font-size: 3rem;
 }
 
+.titleHeading.titleSoBig {
+  font-size: 5rem;
+}
+
+.titleHeading.titleDark {
+  color: #ffffff;
+}
+
 .titleHeading .titleSubheading {
   color: rgb(0, 204, 68);
 }
