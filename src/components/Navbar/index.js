@@ -20,9 +20,25 @@ function Navbar() {
     },
   ];
 
+  const burgerInitital = {
+    opened: false,
+    hamburgerClass: undefined,
+    dropClass: undefined,
+  };
+
   const reducer = (state, action) =>
     action.type ? Styles.scrolled : undefined;
+
+  const hamburgerReducer = (state, action) =>
+    state.opened == false
+      ? { opened: true, hamburgerClass: Styles.opened, dropClass: Styles.show }
+      : burgerInitital;
+
   const [navbarClass, dispatch] = useReducer(reducer, undefined);
+  const [dropClasses, dropDispatch] = useReducer(
+    hamburgerReducer,
+    burgerInitital
+  );
 
   window.addEventListener("scroll", () => {
     window.scrollY > 0 ? dispatch({ type: true }) : dispatch({ type: false });
@@ -34,24 +50,50 @@ function Navbar() {
       <div className={Styles.navitems}>
         {items.map((item) => (
           <NavbarItem
-            styles={Styles}
             name={item.name}
             path={item.path}
             key={item.name}
-            haveDropDown={item.haveDropDown}
-            dropDown={item.dropDown}
           />
         ))}
+      </div>
+      <span
+        className={`${Styles.navHamburger} ${
+          dropClasses.hamburgerClass && dropClasses.hamburgerClass
+        }`}
+        onClick={dropDispatch}
+      ></span>
+      <div
+        className={`${Styles.navDropdown} ${
+          dropClasses.dropClass && dropClasses.dropClass
+        }`}
+      >
+        <ul className={Styles.navDropList}>
+        {items.map((item) => (
+          <DropdownItem
+            name={item.name}
+            path={item.path}
+            key={item.name}
+          />
+        ))}
+        </ul>
       </div>
       <Button path="/download">Download App</Button>
     </nav>
   );
 }
 
-function NavbarItem({ styles, name, path }) {
+function NavbarItem({ name, path }) {
   return (
     <Link to={path ? path : ""}>
-      <div className={styles.navitem}>{name}</div>
+      <div className={Styles.navitem}>{name}</div>
+    </Link>
+  );
+}
+
+function DropdownItem({ name, path }) {
+  return (
+    <Link to={path ? path : ""}>
+      <li className={Styles.dropdownitem}>{name}</li>
     </Link>
   );
 }
