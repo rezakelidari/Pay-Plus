@@ -1,11 +1,12 @@
 import React from "react";
-import Styles from "./styles/Main.module.css";
+import "./styles/Main.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/";
 import NotFound from "./pages/NotFound/";
-import Services from "./pages/Services";
 import Home from "./pages/Home/";
+import Services from "./pages/Services";
+import Report from "./pages/Report";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/annual" element={<Report />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

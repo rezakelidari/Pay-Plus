@@ -1,0 +1,181 @@
+@import url("../../styles/colors.css");
+
+.annualMain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.annualHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.annualBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5rem;
+  border-radius: 5rem;
+  animation: shadowWave 2s linear infinite forwards;
+}
+
+.annualHeading {
+  color: var(--text-primary);
+}
+
+.annualScrollDown {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-bottom: 4px solid #ffffff;
+  border-right: 4px solid #ffffff;
+  transform: rotate(45deg);
+  bottom: 5rem;
+  animation: scroll 1s linear infinite forwards;
+}
+
+.annualScrollDown::before {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100px;
+  background: #ffffff;
+  z-index: 5;
+}
+
+.annualScrollDown::after {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100px;
+  background: #ffffff;
+  top: -0.5rem;
+  left: -0.5rem;
+  z-index: 5;
+}
+
+.annualReports {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eeeeee;
+  gap: 5rem;
+}
+
+.annualReport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eeeeee;
+  gap: 1rem;
+}
+
+.annualReportHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.annualReportHeader span {
+  width: 1rem;
+  height: 3rem;
+  background: var(--color-primary);
+}
+
+.annualGrid {
+  display: grid;
+  grid-template: auto / auto auto;
+  gap: 1rem;
+}
+
+.reportWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 400px;
+  box-shadow: 0 0 1.5rem -0.5rem var(--color-primary-shadow);
+}
+
+.reportLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1rem 0rem var(--color-primary-shadow);
+}
+
+.reportLeft img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.reportRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reportTitle {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+/* Keyframes */
+@keyframes shadowWave {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5),
+      0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.5),
+      0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 5rem 0 -3rem rgba(255, 255, 255, 0),
+      0 -5rem 0 -3rem rgba(255, 255, 255, 0),
+      5rem 0 0 -3rem rgba(255, 255, 255, 0),
+      -5rem 0 0 -3rem rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    bottom: 5rem;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 3rem;
+    opacity: 0;
+  }
+}
+/* End Keyframes */
