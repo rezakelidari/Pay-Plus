@@ -30,7 +30,7 @@ function Navbar() {
     action.type ? Styles.scrolled : undefined;
 
   const hamburgerReducer = (state, action) =>
-    state.opened == false
+    state.opened === false
       ? { opened: true, hamburgerClass: Styles.opened, dropClass: Styles.show }
       : burgerInitital;
 
