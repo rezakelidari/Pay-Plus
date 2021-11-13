@@ -49,11 +49,7 @@ function Navbar() {
       <Title />
       <div className={Styles.navitems}>
         {items.map((item) => (
-          <NavbarItem
-            name={item.name}
-            path={item.path}
-            key={item.name}
-          />
+          <NavbarItem name={item.name} path={item.path} key={item.name} />
         ))}
       </div>
       <span
@@ -68,13 +64,9 @@ function Navbar() {
         }`}
       >
         <ul className={Styles.navDropList}>
-        {items.map((item) => (
-          <DropdownItem
-            name={item.name}
-            path={item.path}
-            key={item.name}
-          />
-        ))}
+          {items.map((item) => (
+            <DropdownItem name={item.name} path={item.path} key={item.name} />
+          ))}
         </ul>
       </div>
       <Button path="/download">Download App</Button>
@@ -84,7 +76,7 @@ function Navbar() {
 
 function NavbarItem({ name, path }) {
   return (
-    <Link to={path ? path : ""}>
+    <Link to={path ? path : ""} onClick={() => window.scrollTo(0, 0)}>
       <div className={Styles.navitem}>{name}</div>
     </Link>
   );
@@ -92,7 +84,7 @@ function NavbarItem({ name, path }) {
 
 function DropdownItem({ name, path }) {
   return (
-    <Link to={path ? path : ""}>
+    <Link to={path ? path : ""} onClick={() => window.scrollTo(0, 0)}>
       <li className={Styles.dropdownitem}>{name}</li>
     </Link>
   );
