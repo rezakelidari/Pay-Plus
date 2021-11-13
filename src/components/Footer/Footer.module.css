@@ -8,3 +8,16 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* Responive */
+@media only screen and (max-width: 768px) {
+  .footerMain {
+    height: 100px;
+    padding: 0 2rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+/* Responive */
