@@ -15,7 +15,19 @@ html {
   font-size: 15px;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: var(--text-primary);
 }
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* End Responsive */
