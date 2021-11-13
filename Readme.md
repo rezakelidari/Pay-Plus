@@ -12,7 +12,7 @@
     A simple project for a financial site implemented with React.js
     <br />
     <br />
-    <a href="https://github.com/rezakelidari/Pay-Plus">View Demo</a>
+    <a href="https://pay-plus.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/rezakelidari/Pay-Plus/issues">Report Bug</a>
     ·
