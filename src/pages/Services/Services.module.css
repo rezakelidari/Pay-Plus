@@ -69,3 +69,39 @@
   text-align: justify;
   text-align-last: left;
 }
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .servicesContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .serviceWrapper {
+    width: 90vw;
+    flex-direction: column-reverse;
+  }
+
+  .serviceWrapper:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  .serviceLeft {
+    min-width: unset;
+    margin: -100px 0 0 0;
+  }
+
+  .serviceLeft:hover {
+    margin: -90px 0 0 0;
+  }
+
+  .serviceWrapper:nth-child(even) .serviceLeft {
+    margin: -100px 0 0 0;
+  }
+  
+  .serviceWrapper:nth-child(even) .serviceLeft:hover {
+    margin: -90px 0 0 0;
+  }
+}
+/* End Responsive */
