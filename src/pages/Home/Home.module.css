@@ -22,6 +22,12 @@
   min-height: 100vh;
 }
 
+.homeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
 .homeMain .left {
   display: flex;
   flex-direction: column;
@@ -33,6 +39,10 @@
   font-size: 1.25rem;
   text-align: justify;
   text-align-last: left;
+}
+
+.homeMain .banner {
+  height: 400px;
 }
 
 .homeMain .scrollDown {
@@ -133,7 +143,7 @@
   flex-direction: column;
   gap: 2rem;
   position: relative;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 .loanMain .steps .timeline::before {
@@ -153,7 +163,6 @@
 
 .loanMain .steps .step {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   gap: 1rem;
   position: relative;
@@ -197,7 +206,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 5rem;
+  padding: 5rem 0;
 }
 
 .invitationMain .box {
@@ -332,3 +341,77 @@
   }
 }
 /* End Keyframes */
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  /* Home section */
+  .homeWrapper {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .homeMain .banner {
+    height: 300px;
+  }
+
+  .homeMain .scrollDown {
+    position: relative;
+    bottom: -2rem;
+  }
+  /* End Home section */
+
+  /* Loan section */
+  .loanMain .featuresContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .loanMain .feature {
+    width: 75%;
+    padding: 3rem 2rem 2rem;
+  }
+
+  .loanMain .featureIcon {
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2rem;
+  }
+  /* End Loan section */
+
+  /* Steps section */
+  .loanMain .steps {
+    width: 100%;
+  }
+
+  .loanMain .steps .step {
+    width: 75%;
+  }
+  /* End Steps section */
+
+  /* Invitation section */
+  .invitationMain .box {
+    padding: 2rem 5rem;
+  }
+  /* End Invitation section */
+
+  /* Faqs section */
+  .faqsMain {
+    padding: 3rem;
+  }
+  /* End Faqs section */
+
+  /* Keyframes */
+  @keyframes icon {
+    0% {
+      box-shadow: 0 0 0 0rem rgba(0, 68, 255, 0.5);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0.5rem rgba(0, 68, 255, 0);
+    }
+  }
+  /* End Keyframes */
+}
+/* End Responsive */
