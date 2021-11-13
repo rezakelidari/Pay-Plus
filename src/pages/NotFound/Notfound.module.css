@@ -1,4 +1,4 @@
-.notfound {
+.notfoundMain {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,10 +8,18 @@
   width: 100vw;
 }
 
-.title {
+.notfoundTitle {
   font-size: 5rem;
 }
 
-.desc {
+.notfoundDesc {
   font-size: 2rem;
 }
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .notfoundMain {
+    height: calc(100vh - 100px);
+  }
+}
+/* End Responsive */
