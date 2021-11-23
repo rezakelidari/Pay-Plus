@@ -40,7 +40,7 @@
 
 ## About The Project
 
-A simple project for a financial site implemented with React.js. A simple project for a financial site implemented with React.js. Fully responsive, fully SPA and light and fast. This project is one of the examples of my work
+A simple project for a financial site implemented with React.js. Fully responsive, fully SPA and light and fast. This project is one of the examples of my work
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
